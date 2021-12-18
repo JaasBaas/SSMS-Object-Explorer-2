@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="SsmsObjectExplorer2.AddIn.ObjectExplorerToolWindowControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vsshell="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
+             Background="{DynamicResource {x:Static vsshell:VsBrushes.WindowKey}}"
+             Foreground="{DynamicResource {x:Static vsshell:VsBrushes.WindowTextKey}}"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300"
+             Name="MyToolWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Name="ToolbarPanel" Orientation="Horizontal" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Margin="0,0,0,2">
+            <Button Content="C" Width="25" Height="25" Name="btnConnect" Margin="2,2,0,2"/>
+            <Button Content="C" Width="25" Height="25"  Margin="2,2,0,2"/>
+        </StackPanel>
+
+        <StackPanel Name="ObjectTypePanel" Grid.Row="1" Orientation="Horizontal" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Margin="0,0,0,2">
+            <Button Content="T" Width="25" Height="25" Name="btnTables" Margin="2,2,0,2" ToolTip="Tables"/>
+            <Button Content="V" Width="25" Height="25"  Margin="2,2,0,2" ToolTip="Views"/>
+            <Button Content="Sps" Width="25" Height="25"  Margin="2,2,0,2" ToolTip="Stored Procedures"/>
+            <Button Content="Other" Height="25" Margin="2,2,0,2" ToolTip="Other"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <DockPanel Name="FilterPanel" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Margin="0,0,0,2">
+                <TextBox Width="265" Margin="2" DockPanel.Dock="Left" />
+            </DockPanel>
+            <Button Width="25" Content="CF" Name="btnClearFilter" Margin="2" DockPanel.Dock="Right" />
+        </StackPanel>
+
+        <TreeView Name="treeObjects" Grid.Row="3">
+            <TreeViewItem IsExpanded="True" Header="dbo.DimDate">
+                <TreeViewItem Header="DateKey"/>
+                <TreeViewItem Header="Date"/>
+                <TreeViewItem Header="CalendarYear"/>
+            </TreeViewItem>
+            <TreeViewItem Header="dbo.DimAgent" IsExpanded="False">
+                <TreeViewItem Header="DimAgentKey"/>
+                <TreeViewItem Header="AgentNo"/>
+                <TreeViewItem Header="AgentName"/>
+            </TreeViewItem>
+        </TreeView>
+    </Grid>
+</UserControl>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1758
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SsmsObjectExplorer2.AddIn", "SsmsObjectExplorer2.AddIn\SsmsObjectExplorer2.AddIn.csproj", "{3CBF84C7-3FB7-4158-AA67-EB2ECEFC9366}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CBF84C7-3FB7-4158-AA67-EB2ECEFC9366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CBF84C7-3FB7-4158-AA67-EB2ECEFC9366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CBF84C7-3FB7-4158-AA67-EB2ECEFC9366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CBF84C7-3FB7-4158-AA67-EB2ECEFC9366}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C130BBB0-3AC5-40AA-8C80-D490154563D3}
+	EndGlobalSection
+EndGlobal
